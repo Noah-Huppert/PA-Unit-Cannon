@@ -1,0 +1,24 @@
+{
+    "context": "server",
+    "identifier": "com.noahhuppert.pa.unitCannon",
+    "display_name": "Unit Cannon",
+    "description": "Adds the Unit Cannon to PA",
+    "author": "someonewhoisnobody",
+    "version": "0.0.1",
+    "build": "71459",
+    "date": "2014/9/2",
+    "signature": "not yet implemented",
+    "forum": "TODO",
+    "category": [
+        "in-game",
+        "unit",
+        "unit cannon"
+    ],
+    "id": "com.noahhuppert.pa.unitCannon",
+    "priority": 100,
+    "enabled": true,
+    "installpath": "c:\\Users\\noahh_000\\AppData\\Local\\Uber Entertainment\\Planetary Annihilation\\server_mods\\com.noahhuppert.pa.unitCannon",
+    "dependencies": [
+      "com.noahhuppert.pa.unitCannonClientSide"
+    ]
+}

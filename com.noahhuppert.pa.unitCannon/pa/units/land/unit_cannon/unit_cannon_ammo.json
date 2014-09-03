@@ -1,0 +1,111 @@
+{
+  "display_name": "Orbital Drop Pod",
+  "description": "Orbital Drop Pod- Long range unit transport",
+  "has_notifications": false,
+  "ammo_type": "Projectile",
+  "build_metal_cost": 1000,
+  "flight_type": "Staged",
+  "damage": 0,
+  "splash_damage": 10,
+  "splash_radius": 10,
+  "full_damage_splash_radius": 2,
+  "splash_damage_allies": true,
+  "cruise_height": 125,
+  "initial_velocity": 60,
+  "max_velocity": 180,
+  "turn_rate": 180,
+  "lifetime": 0,
+  "show_strategic_icon": true,
+  "interplanetary_type": "INTER_System",
+  "system_velocity_multiplier": 30,
+  "gravwell_velocity_multiplier": 30,
+  "spawn_layers": "WL_Air",
+  "show_in_orbital_layer": true,
+  "splash_damage_orbital": true,
+  "enable_orbital_shell": true,
+  "burn_damage": 20,
+  "burn_radius": 10,
+  "influence_radius": 1300,
+  "sim_impact_effect": "/pa/units/land/unit_cannon/unit_cannon_ammo_explosion.json",
+  "impact_decals": [
+    "/pa/effects/specs/scorch_a_01.json"
+  ],
+  "damage_volume": {
+    "initial_radius": 10,
+    "radius_velocity": 50,
+    "radius_accel": 100,
+    "delay": 1,
+    "burnable_remove_radius": 10
+  },
+  "mesh_bounds": [
+    30,
+    20,
+    10
+  ],
+  "model": {
+    "filename": "/pa/units/orbital/orbital_lander/orbital_lander.papa"
+  },
+  "unit_types": [
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Orbital"
+  ],
+  "collision_check": "ground",
+  "physics": {
+    "radius": 10,
+    "push_class": 1,
+    "gravity_scalar": 3,
+    "ignore_gravity": true,
+    "add_to_spatial_db": true,
+    "allow_underground": true
+  },
+  "fx_trail": {
+    "filename": "/pa/units/air/missile_orbital/missile_orbital_trail.pfx",
+    "offset": [
+      0,
+      0,
+      20
+    ]
+  },
+  "events": {
+    "collided": {
+      "audio_cue": "/SE/Impacts/missile_seeking",
+      "effect_spec": "/pa/units/air/missile_orbital/missile_orbital_explosion.pfx",
+      "effect_world_aligned": false
+    }
+  },
+  "audio_loop": "/SE/Movement/missile/nuke_missile_fly_loop",
+  "armor_damage_map": {
+    "AT_Commander": 0.33
+  },
+  "stages": [
+    {
+      "ignores_gravity": true,
+      "ignores_LOS": true,
+      "stage_duration": 600,
+      "stage_turn_rate": 0,
+      "rotates_to_velocity": true
+    },
+    {
+      "ignores_gravity": true,
+      "ignores_LOS": true,
+      "stage_duration": 0,
+      "stage_turn_rate": 90,
+      "stage_change_range": 75,
+      "rotates_to_velocity": true
+    },
+    {
+      "ignores_gravity": false,
+      "ignores_LOS": false,
+      "stage_duration": 5000,
+      "stage_turn_rate": 360,
+      "rotates_to_velocity": true
+    },
+    {
+      "ignores_gravity": false,
+      "ignores_LOS": false,
+      "stage_duration": 5000,
+      "stage_turn_rate": 1080,
+      "rotates_to_velocity": true
+    }
+  ]
+}
